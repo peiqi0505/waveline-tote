@@ -65,6 +65,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero-media{position:relative}
 .photo{width:100%;height:100%;object-fit:cover;object-position:center 42%;mix-blend-mode:multiply}
 .hero-frame{position:relative;background:var(--bone);border:1px solid var(--line);aspect-ratio:1/1;overflow:hidden}
+.photo-frame-softener{position:absolute;left:0;right:0;bottom:0;height:17%;pointer-events:none;background:linear-gradient(to top,var(--bone) 10%,rgba(242,239,231,0))}
 .swatch-line{position:absolute;left:14px;bottom:14px;display:flex;gap:6px;padding:7px 10px;background:rgba(242,239,231,.9);border:1px solid var(--line)}
 .dot{width:11px;height:11px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(29,35,32,.2)}
 .hero-badge{position:absolute;right:14px;top:14px;background:var(--butter);color:var(--ink);font-size:12.5px;letter-spacing:.03em;padding:8px 12px}
@@ -102,7 +103,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 .colours{background:var(--bone-deep);padding-block:60px}
 .colour-layout{display:grid;gap:26px}
-.colour-stage{border:1px solid var(--line);background:var(--bone);aspect-ratio:4/5;overflow:hidden}
+.colour-stage{position:relative;border:1px solid var(--line);background:var(--bone);aspect-ratio:4/5;overflow:hidden}
 .colour-caption{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 2px;font-size:14px;color:rgba(29,35,32,.66)}
 .colour-caption strong{font-family:var(--serif);font-size:20px;font-weight:400;color:var(--ink)}
 .swatch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}
@@ -248,6 +249,7 @@ details p{margin:0 0 20px;max-width:66ch;color:rgba(29,35,32,.76);font-size:15.5
       <div class="hero-media">
         <div class="hero-frame">
           <img class="photo" id="heroPhoto" src="assets/tote-01.jpg" alt="The Wave Tote in Black Ink, standing on a pale studio table">
+          <div class="photo-frame-softener" aria-hidden="true"></div>
           <div class="swatch-line" id="miniDots" aria-hidden="true"></div>
           <div class="hero-badge">10 colorways</div>
         </div>
@@ -333,6 +335,7 @@ details p{margin:0 0 20px;max-width:66ch;color:rgba(29,35,32,.76);font-size:15.5
         <div>
           <div class="colour-stage">
             <img class="photo" id="colourPhoto" src="assets/tote-01.jpg" alt="The Wave Tote in Black Ink">
+            <div class="photo-frame-softener" aria-hidden="true"></div>
           </div>
           <div class="colour-caption">
             <strong id="colourName">Black Ink</strong>
